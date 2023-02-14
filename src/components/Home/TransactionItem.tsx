@@ -2,10 +2,11 @@ import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { SmallText } from "../texts";
 import { Color, FontSize, Padding } from "../../utils/styleguide";
+import {TransactionItemPropType} from '../../../types/components/Home/TransactionItem'
 
-const TransactionItem = ({ transaction }) => {
+const TransactionItem = ({ transaction }: TransactionItemPropType) => {
   const { platform, product, time, type, price } = transaction;
-
+console.log(transaction)
   return (
     <View
       style={{

@@ -1,0 +1,3 @@
+interface DashboardPropType {
+  wrapperStyle: Object;
+}

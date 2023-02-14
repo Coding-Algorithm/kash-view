@@ -3,7 +3,7 @@ import React from "react";
 import { MediumText, SmallText } from "../texts";
 import { Color, FontSize, Margin, Padding } from "../../utils/styleguide";
 
-const Dashboard = ({ wrapperStyle = {} }: { wrapperStyle: object }) => {
+const Dashboard = ({ wrapperStyle = {} }: DashboardPropType) => {
   return (
     <View
       style={[

@@ -1,5 +1,6 @@
 export const Margin = {
     sm: 16,
+    xmd: 20,
     md: 24,
     lg: 32,
     xl: 48
@@ -8,6 +9,7 @@ export const Margin = {
 
 
 export const Padding = {
+    xsm: 10,
     sm: 16,
     md: 24,
     lg: 32,
@@ -26,7 +28,9 @@ export const Color = {
     income: "#12B76A",
     expenses: "#F04438",
     homeBg: "#F2F4F7",
-    homeBgGray: "#EAECF0"
+    homeBgGray: "#EAECF0",
+    searchBarBorder: "#D0D5DD",
+    searchBarCursor: "#98A2B3"
 }
 
 

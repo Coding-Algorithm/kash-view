@@ -3,7 +3,7 @@ export const transactions = [
     product: "Lumi Hair 24-in - Black",
     time: "10:12am",
     price: "₦15,455.00",
-    platform: "oneline",
+    platform: "Online",
     type: "income",
   },
   {
@@ -18,7 +18,7 @@ export const transactions = [
     product: "Lumi Hair 24-in - Black",
     time: "10:24am",
     price: "₦15,455.00",
-    platform: "oneline",
+    platform: "Online",
     type: "income",
   },
 
@@ -26,7 +26,7 @@ export const transactions = [
     product: "Lumi Hair 24-in - Black",
     time: "10:12am",
     price: "₦15,455.00",
-    platform: "oneline",
+    platform: "Online",
     type: "income",
   },
 ];

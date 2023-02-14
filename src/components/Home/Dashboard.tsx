@@ -10,7 +10,7 @@ const Dashboard = ({ wrapperStyle = {} }: { wrapperStyle: object }) => {
         {
           width: "100%",
           padding: Padding.sm,
-          borderRadius: 12,
+          borderRadius: 7,
           backgroundColor: Color.white,
           shadowColor: "#000",
           shadowOffset: { width: 0, height: 10 },

@@ -10,6 +10,8 @@ import { Color, Margin, Padding } from "../utils/styleguide";
 import { MediumText } from "../components/texts";
 import TabWrapper from "../components/Records/TabWrapper";
 import Dashboard from "../components/Home/Dashboard";
+import ReportTab from "../components/Records/ReportTab";
+import InventoryTab from "../components/Records/InventoryTab";
 
 const Record = () => {
   const [activeTab, setActiveTab] = useState("Inventory");
@@ -42,23 +44,8 @@ const Record = () => {
         <TabWrapper activeTab={activeTab} setActiveTab={setActiveTab} />
       </View>
 
-      {activeTab === "Report" && (
-        <View
-          style={{
-            width: "100%",
-            paddingHorizontal: Padding.sm,
-          }}
-        >
-          <Dashboard
-            wrapperStyle={{
-              position: "relative",
-              elevation: 0,
-              borderWidth: 0.5,
-              borderColor: Color.homeGray,
-            }}
-          />
-        </View>
-      )}
+      {activeTab === "Report" && <ReportTab />}
+      {activeTab === "Inventory" && <InventoryTab />}
     </SafeAreaView>
   );
 };

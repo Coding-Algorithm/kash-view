@@ -68,8 +68,6 @@ const Home = () => {
           </View>
           {transactions.map((transaction, index) => {
             const { platform, product, time, type, price } = transaction;
-
-            console.log(transaction);
             return (
               index < 2 && (
                 <View

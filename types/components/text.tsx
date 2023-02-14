@@ -1,3 +1,4 @@
 export interface textPropsType {
-  title: string;
+  title: String;
+  textStyle: object | undefined
 }

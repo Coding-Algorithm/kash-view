@@ -3,20 +3,23 @@ import React from "react";
 import { MediumText, SmallText } from "../texts";
 import { Color, FontSize, Margin, Padding } from "../../utils/styleguide";
 
-const Dashboard = () => {
+const Dashboard = ({ wrapperStyle = {} }: { wrapperStyle: object }) => {
   return (
     <View
-      style={{
-        width: "100%",
-        padding: Padding.sm,
-        borderRadius: 12,
-        backgroundColor: Color.white,
-        shadowColor: "#000",
-        shadowOffset: { width: 0, height: 10 },
-        shadowOpacity: 0,
-        shadowRadius: 0,
-        elevation: 20,
-      }}
+      style={[
+        {
+          width: "100%",
+          padding: Padding.sm,
+          borderRadius: 12,
+          backgroundColor: Color.white,
+          shadowColor: "#000",
+          shadowOffset: { width: 0, height: 10 },
+          shadowOpacity: 0,
+          shadowRadius: 0,
+          elevation: 20,
+        },
+        wrapperStyle,
+      ]}
     >
       <View
         style={{

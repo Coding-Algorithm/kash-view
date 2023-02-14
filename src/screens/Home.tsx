@@ -30,12 +30,12 @@ const Home = () => {
       <View
         style={{
           width: "100%",
-          height: calcHeight(0.6),
+          height: calcHeight(0.55),
           backgroundColor: Color.homeBg,
           bottom: 0,
           zIndex: -1,
           position: "absolute",
-          paddingTop: Padding.xlg,
+          paddingTop: Padding.xxlg,
         }}
       >
         <View

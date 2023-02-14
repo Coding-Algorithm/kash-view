@@ -1,15 +1,12 @@
 import {
   SafeAreaView,
   StyleSheet,
-  Text,
-  TouchableOpacity,
   View,
 } from "react-native";
 import React, { useState } from "react";
 import { Color, Margin, Padding } from "../utils/styleguide";
 import { MediumText } from "../components/texts";
 import TabWrapper from "../components/Records/TabWrapper";
-import Dashboard from "../components/Home/Dashboard";
 import ReportTab from "../components/Records/ReportTab";
 import InventoryTab from "../components/Records/InventoryTab";
 

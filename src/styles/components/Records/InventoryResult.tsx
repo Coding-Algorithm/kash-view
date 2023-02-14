@@ -1,10 +1,13 @@
 import { StyleSheet } from "react-native";
-import { Padding } from "../../../utils/styleguide";
+import { Color, Margin, Padding, Radius } from "../../../utils/styleguide";
 
 export const Styles = StyleSheet.create({
     container: {
-        flex: 1,
-        paddingHorizontal: Padding.sm
+        width: "100%",
+        padding: Padding.sm,
+        backgroundColor: Color.white,
+        marginBottom: Margin.sm,
+        borderRadius: Radius.sm
     }
 
 });

@@ -13,6 +13,7 @@ import { calcHeight } from "../actions/calcWidthHeight";
 import { transactions } from "../data/transactions";
 import Header from "../components/Home/Header";
 import Dashboard from "../components/Home/Dashboard";
+import TransactionItem from "../components/Home/TransactionItem";
 
 const Home = () => {
   return (
@@ -23,9 +24,7 @@ const Home = () => {
         paddingTop: Padding.xlg,
       }}
     >
-
       <Header />
-
 
       <View
         style={{
@@ -68,68 +67,7 @@ const Home = () => {
           </View>
           {transactions.map((transaction, index) => {
             const { platform, product, time, type, price } = transaction;
-            return (
-              index < 2 && (
-                <View
-                  style={{
-                    paddingVertical: Padding.md,
-                    marginBottom: 1,
-                    paddingHorizontal: Padding.sm,
-                    backgroundColor: Color.white,
-                  }}
-                >
-                  <View
-                    style={{
-                      flexDirection: "row",
-                      justifyContent: "space-between",
-                      marginBottom: 5,
-                    }}
-                  >
-                    <SmallText
-                      title={`${product}`}
-                      textStyle={{
-                        color: Color.balanceColor,
-                        fontSize: FontSize.md_text,
-                      }}
-                    />
-
-                    <SmallText
-                      title={`${price}`}
-                      textStyle={{
-                        color:
-                          type === "income" ? Color.income : Color.expenses,
-                      }}
-                    />
-                  </View>
-
-                  <View
-                    style={{
-                      flexDirection: "row",
-                      justifyContent: "space-between",
-                    }}
-                  >
-                    <SmallText
-                      title={`${time}`}
-                      textStyle={{ color: Color.homeGray }}
-                    />
-
-                    <View
-                      style={{
-                        paddingVertical: 5,
-                        paddingHorizontal: 10,
-                        backgroundColor: Color.homeBgGray,
-                        borderRadius: 5,
-                      }}
-                    >
-                      <SmallText
-                        title={`${platform}`}
-                        textStyle={{ color: Color.homeGray }}
-                      />
-                    </View>
-                  </View>
-                </View>
-              )
-            );
+            return index < 2 && <TransactionItem transaction={transaction} />;
           })}
 
           <View
@@ -146,70 +84,7 @@ const Home = () => {
 
           {transactions.map((transaction, index) => {
             const { platform, product, time, type, price } = transaction;
-
-            console.log(transaction);
-            return (
-              index < 2 && (
-                <View
-                  style={{
-                    paddingVertical: Padding.md,
-                    marginBottom: 1,
-                    paddingHorizontal: Padding.sm,
-                    backgroundColor: Color.white,
-                  }}
-                >
-                  <View
-                    style={{
-                      flexDirection: "row",
-                      justifyContent: "space-between",
-                      marginBottom: 5,
-                    }}
-                  >
-                    <SmallText
-                      title={`${product}`}
-                      textStyle={{
-                        color: Color.balanceColor,
-                        fontSize: FontSize.md_text,
-                      }}
-                    />
-
-                    <SmallText
-                      title={`${price}`}
-                      textStyle={{
-                        color:
-                          type === "income" ? Color.income : Color.expenses,
-                      }}
-                    />
-                  </View>
-
-                  <View
-                    style={{
-                      flexDirection: "row",
-                      justifyContent: "space-between",
-                    }}
-                  >
-                    <SmallText
-                      title={`${time}`}
-                      textStyle={{ color: Color.homeGray }}
-                    />
-
-                    <View
-                      style={{
-                        paddingVertical: 5,
-                        paddingHorizontal: 10,
-                        backgroundColor: Color.homeBgGray,
-                        borderRadius: 5,
-                      }}
-                    >
-                      <SmallText
-                        title={`${platform}`}
-                        textStyle={{ color: Color.homeGray }}
-                      />
-                    </View>
-                  </View>
-                </View>
-              )
-            );
+            return index > 1 && <TransactionItem transaction={transaction} />;
           })}
         </ScrollView>
       </View>

@@ -6,7 +6,6 @@ import {TransactionItemPropType} from '../../../types/components/Home/Transactio
 
 const TransactionItem = ({ transaction }: TransactionItemPropType) => {
   const { platform, product, time, type, price } = transaction;
-console.log(transaction)
   return (
     <View
       style={{
